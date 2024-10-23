@@ -16,11 +16,12 @@
   </div>
 </div>
 <app-main-navbar class="d-flex align-items-center justify-content-center my-3"></app-main-navbar>
+<app-filter-form class="d-flex align-items-center justify-content-center my-3"></app-filter-form>
 <div class="container">
   <div class="row">
     <div class="col-6 px-0" *ngFor="let presentation of presentations">
       <div>
-        <app-presentation-card [photoUrl]="this.presentations[0].photoUrl" [title]="this.presentations[0].title" [description]="this.presentations[0].description" [text]="this.presentations[0].text" ></app-presentation-card>
+        <app-presentation-card [photoUrl]="this.presentation.photoUrl" [title]="this.presentation.title" [description]="this.presentation.description" [text]="this.presentation.text" ></app-presentation-card>
       </div>
     </div>
   </div>
