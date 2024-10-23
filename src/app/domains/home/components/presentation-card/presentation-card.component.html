@@ -1,0 +1,18 @@
+<div class="card rounded-0 bg-dark text-white">
+  <img src="{{ this.photoUrl }}" width="800px" height="350px" class="card-img rounded-0" alt="image_name">
+  <div class="card-img-overlay">
+    <div class="text">
+      <h5 class="card-title">{{ this.title }}</h5>
+      <p class="card-text">{{ this.description }}</p>
+      <p class="card-text">{{ this.text }}</p>
+      <div class="rounded-circle d-flex align-items-center justify-content-center" role="button" (click)="editOrDeleteModal()" style="background-color: orange; height: 40px; width: 40px;">
+        <a><img
+          src="../../../../assets/images/icons/edit-button.svg"
+          alt="logout-icon" width="25px" height="25px"
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-edit-presentation-alert-modal class="d-flex align-items-center justify-content-center" [error]="alertMessage" *ngIf="alertMessage!=null" (close)="alertMessage=null"></app-edit-presentation-alert-modal>
